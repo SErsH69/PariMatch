@@ -12,8 +12,8 @@ window.app = new Vue({
     data: () => ({
         isMounted: false,
         sizes: {
-            tablet: 1024,
-            mobile: 768,
+            tablet: 960,
+            mobile: 560,
             window: window.innerWidth
         },
         header: new Header({

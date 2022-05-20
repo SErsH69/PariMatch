@@ -1,3 +1,19 @@
 <header class="header">
-    
+    <div class="header__logos">
+        <a href="/" class="header__logo"><img src="./img/svg/logo.svg" alt=""></a>
+        <div class="header__reward"><img src="./img/svg/reward1.svg" alt=""></div>
+        <div class="header__reward"><img src="./img/svg/reward2.svg" alt=""></div>
+    </div>
+    <div class="header__lang">
+        <a href="/" class="isActive">RU</a>
+        <a href="/">KZ</a>
+    </div>
+    <div class="header__buttons" v-if="!isTablet && !isMobile">
+        <a href="#" class="header__button"><span>Вход</span></a>
+        <a href="#" class="header__button yellow"><span>Регистрация</span></a>
+    </div>
+    <div class="header__socs" v-if="isTablet || isMobile">
+        <a href="#"><img src="./img/svg/s1.svg" alt=""></a>
+        <a href="#"><img src="./img/svg/s2.svg" alt=""></a>
+    </div>
 </header>

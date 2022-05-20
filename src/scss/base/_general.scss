@@ -1,0 +1,56 @@
+body {
+    box-sizing: border-box;
+}
+*,::after,::before {
+    box-sizing: inherit;
+    outline: none;
+    scroll-behavior: smooth;
+}
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background: url('../img/bg2.png') 50% / contain no-repeat;
+    background-color: #000;
+}
+.main {
+    flex: 1 0 auto;
+}
+.footer {
+    flex: 0 0 auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+textarea {
+    resize: none;
+}
+// scrollbar
+/* width */
+::-webkit-scrollbar {
+    width: vw(10);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #EEEEEE;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #F8FF13;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #F8FF13;
+}
+// scrollbar end
