@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper" id="app" :class="{isMobile, isTablet}">
+        @@include('blocks/modules/header/header.html', {
+            "type" : "kz",
+            "text" : "kiру",
+            "text2" : "tiркеу",
+            "pages" : "index1"
+        })
+        <main>
+            @@include('blocks/modules/main_block/main_block.html', {
+                'type' : "index1"
+            })
+        </main>
+        @@include('blocks/modules/footer/footer.html', {
+            "text" : "Букмекерлік кеңсенің қызметімен айналысу үшін, 31.12.2020 ж. (17.07.2028 жылға дейін жарамды) № 20019733 лицензия, «Қазақстан Республикасы Мәдениет және спорт министрлігінің Туризм индустриясы комитеті» РММ берілген.",
+        })
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+</html>

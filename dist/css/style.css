@@ -382,8 +382,8 @@ template {
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff"), url("../fonts/Gilroy-Black.ttf") format("ttf");
-  font-weight: 900;
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("ttf");
+  font-weight: 700;
 }
 
 @font-face {
@@ -396,15 +396,15 @@ template {
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("ttf");
-  font-weight: 700;
+  src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff"), url("../fonts/Gilroy-Black.ttf") format("ttf");
+  font-weight: 900;
 }
 
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff"), url("../fonts/Gilroy-Heavy.ttf") format("ttf");
-  font-weight: 800;
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("ttf");
+  font-weight: 500;
 }
 
 @font-face {
@@ -417,8 +417,15 @@ template {
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("ttf");
-  font-weight: 500;
+  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff"), url("../fonts/Gilroy-Semibold.ttf") format("ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff"), url("../fonts/Gilroy-Heavy.ttf") format("ttf");
+  font-weight: 800;
 }
 
 @font-face {
@@ -426,13 +433,6 @@ template {
   font-display: swap;
   src: url("../fonts/Pari-Match Regular.woff2") format("woff2"), url("../fonts/Pari-Match Regular.woff") format("woff"), url("../fonts/Pari-Match Regular.ttf") format("ttf");
   font-weight: 400;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff"), url("../fonts/Gilroy-Semibold.ttf") format("ttf");
-  font-weight: 600;
 }
 
 body {
@@ -455,14 +455,36 @@ body {
 }
 
 .no-webp .wrapper {
-  background: url("../img/bg2.png") 50%/contain no-repeat; }
+  background: #000 url("../img/bg2.jpg") 0 50%/100% no-repeat; }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  background-color: #000;
+}
+
+.no-webp .wrapper.isTablet, .no-webp .wrapper.isMobile {
+  background: #000 url("../img/bg3.jpg") 0 0/100% no-repeat; }
+
+.wrapper.isTablet,
+.wrapper.isMobile {
+  height: auto;
+}
+
+.no-webp .isStyles .wrapper {
+  background: #000 url("../img/bg4.jpg") 0 50%/100% no-repeat; }
+
+.no-webp .isStyles .wrapper.isTablet, .no-webp .isStyles .wrapper.isMobile {
+  background: #000 url("../img/bg3.jpg") 0 0/100% no-repeat; }
+
+.isStyles .wrapper.isTablet,
+.isStyles .wrapper.isMobile {
+  height: auto;
+}
+
+.isStyles .wrapper.isMobile .main_block__svg img.mob {
+  max-width: 250px;
 }
 
 .main {
@@ -540,6 +562,7 @@ textarea {
 .header__lang a {
   text-decoration: none;
   padding: 0 5px;
+  text-transform: uppercase;
   display: block;
   font-family: "Gilroy", Helvetica, sans-serif;
   font-style: normal;
@@ -648,6 +671,117 @@ textarea {
   font-size: 17px;
 }
 
+.main_block {
+  text-align: center;
+  margin-right: 7.1354166667vw;
+  max-width: 35.3645833333vw;
+  width: 100%;
+  margin-left: auto;
+}
+
+.main_block__svg {
+  width: 35.3645833333vw;
+  height: 29.2708333333vw;
+}
+
+.main_block__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_block__button {
+  border: 2px solid #F8FF13;
+  box-shadow: 0px 4px 13px rgba(108, 111, 0, 0.3);
+  font-family: "Pari", Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.875vw;
+  text-transform: uppercase;
+  background: #F8FF13;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 0.5729166667vw 3.0729166667vw;
+  transition: all 0.3s ease-out;
+  transform: skewX(330deg);
+  margin-bottom: 0.5208333333vw;
+}
+
+.main_block__button span {
+  transform: skewX(30deg);
+  display: block;
+}
+
+.main_block__button:hover {
+  color: #F8FF13;
+  background: #000;
+}
+
+.main_block__link {
+  font-family: "Gilroy";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.8854166667vw;
+  text-align: center;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 8.71549px rgba(0, 0, 0, 0.5);
+}
+
+.main_block__link:hover {
+  text-decoration: none;
+}
+
+.isTablet .main_block,
+.isMobile .main_block {
+  padding-top: 9.375vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.isTablet .main_block__svg,
+.isMobile .main_block__svg {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  width: 100%;
+}
+
+.isTablet .main_block__svg img,
+.isMobile .main_block__svg img {
+  max-width: 100%;
+}
+
+.isTablet .main_block__svg img.mob,
+.isMobile .main_block__svg img.mob {
+  margin-bottom: 24px;
+  max-width: 46.3541666667vw;
+  width: 100%;
+}
+
+.isTablet .main_block__button,
+.isMobile .main_block__button {
+  font-size: 28px;
+  width: 255px;
+  padding: 9px 20px;
+  margin-bottom: 10px;
+}
+
+.isTablet .main_block__link,
+.isMobile .main_block__link {
+  font-size: 13px;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -724,39 +858,10 @@ textarea {
   font-size: 8px;
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 200;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
+.webp .wrapper { background: #000 url(../img/bg2.webp) 0 50%/100% no-repeat; }
 
-.modal.isOpened {
-  opacity: 1;
-  visibility: visible;
-}
+.webp .wrapper.isTablet, .webp .wrapper.isMobile { background: #000 url(../img/bg3.webp) 0 0/100% no-repeat; }
 
-.modal:after {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-}
+.webp .isStyles .wrapper { background: #000 url(../img/bg4.webp) 0 50%/100% no-repeat; }
 
-.modal__in {
-  display: inline-block;
-  vertical-align: middle;
-  width: 100%;
-  max-width: 320px;
-  padding: 1.0416666667vw;
-  background: #fff;
-}
-
-.webp .wrapper { background: url(../img/bg2.webp) 50%/contain no-repeat; }
+.webp .isStyles .wrapper.isTablet, .webp .isStyles .wrapper.isMobile { background: #000 url(../img/bg3.webp) 0 0/100% no-repeat; }

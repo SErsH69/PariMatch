@@ -17,8 +17,25 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    background: url('../img/bg2.png') 50% / contain no-repeat;
-    background-color: #000;
+    background: #000 url('../img/bg2.jpg') 0 50% / 100% no-repeat;
+    &.isTablet, &.isMobile {
+        background: #000 url('../img/bg3.jpg') 0 0 / 100% no-repeat;
+        height: auto;
+    }
+}
+.isStyles {
+    .wrapper {
+        background: #000 url('../img/bg4.jpg') 0 50% / 100% no-repeat;
+        &.isTablet, &.isMobile {
+            background: #000 url('../img/bg3.jpg') 0 0 / 100% no-repeat;
+            height: auto;
+        }
+        &.isMobile {
+            .main_block__svg img.mob {
+                max-width: 250px;   
+            }
+        }
+    }
 }
 .main {
     flex: 1 0 auto;

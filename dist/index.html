@@ -7,8 +7,8 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap&_v=20220520113941" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?_v=20220520113941">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap&_v=20220520154436" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?_v=20220520154436">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -20,11 +20,11 @@
     </div>
     <div class="header__lang">
         <a href="/" class="isActive">RU</a>
-        <a href="/">KZ</a>
+        <a href="/index_kz.html">KZ</a>
     </div>
     <div class="header__buttons" v-if="!isTablet && !isMobile">
-        <a href="#" class="header__button"><span>Вход</span></a>
-        <a href="#" class="header__button yellow"><span>Регистрация</span></a>
+        <a href="#" class="header__button"><span>ВХОД</span></a>
+        <a href="#" class="header__button yellow"><span>РЕГИСТРАЦИЯ</span></a>
     </div>
     <div class="header__socs" v-if="isTablet || isMobile">
         <a href="#"><img src="./img/svg/s1.svg" alt=""></a>
@@ -32,7 +32,22 @@
     </div>
 </header>
         <main>
-            
+            <div class="main_block">
+    <div class="main_block__svg" v-if="!isTablet && !isMobile">
+        <img src="./img/svg/info.svg" alt="">
+    </div>
+    <div class="main_block__svg" v-if="isTablet || isMobile">
+        
+            <img class="mob" src="./img/svg/info3.svg" alt="">
+            <img src="./img/svg/info2.svg" alt="">
+        
+        
+    </div>
+    <div class="main_block__buttons">
+        <a href="#" class="main_block__button"><span>УЧАСТВОВАТЬ</span></a>
+        <a href="#" class="main_block__link">Правила и Условия</a>
+    </div>
+</div>
         </main>
         <footer class="footer">
     <div class="footer__info">
@@ -51,20 +66,7 @@
     </div>
     <div class="footer__copyright" v-if="isTablet || isMobile">Лицензия на осуществление деятельности букмекерской конторы №20019733 от 31.12.2020г. (действительна до 17.07.2028г.) выдана РГУ «Комитет индустрии туризма Министерства культуры и спорта Республики Казахстан»</div>
 </footer>
-        <div class="modal" data-modal="1">
-    <div class="modal__in">
-        <div class="modal__closer"></div>
-        modal 1
     </div>
-</div>
-
-<div class="modal" data-modal="2">
-    <div class="modal__in">
-        <div class="modal__closer"></div>
-        modal 2
-    </div>
-</div>
-    </div>
-    <script src="js/app.min.js?_v=20220520113941"></script>
+    <script src="js/app.min.js?_v=20220520154436"></script>
 </body>
 </html>

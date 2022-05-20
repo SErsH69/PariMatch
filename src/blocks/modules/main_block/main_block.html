@@ -1,0 +1,19 @@
+<div class="main_block">
+    <div class="main_block__svg" v-if="!isTablet && !isMobile">
+        <img src="./img/svg/info.svg" alt="">
+    </div>
+    <div class="main_block__svg" v-if="isTablet || isMobile">
+        @@if (type === 'index1') {
+            <img class="mob" src="./img/svg/info3.svg" alt="">
+            <img src="./img/svg/info2.svg" alt="">
+        }
+        @@if (type === 'index2') {
+            <img class="mob" src="./img/svg/info4.svg" alt="">
+            <img src="./img/svg/info2.svg" alt="">
+        }
+    </div>
+    <div class="main_block__buttons">
+        <a href="#" class="main_block__button"><span>УЧАСТВОВАТЬ</span></a>
+        <a href="#" class="main_block__link">Правила и Условия</a>
+    </div>
+</div>

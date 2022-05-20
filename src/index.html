@@ -12,12 +12,20 @@
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
-        @@include('blocks/modules/header/header.html', {})
+        @@include('blocks/modules/header/header.html', {
+            "type" : "ru",
+            "text" : "ВХОД",
+            "text2" : "РЕГИСТРАЦИЯ",
+            "pages" : "index1"
+        })
         <main>
-            @@include('blocks/modules/main_block/main_block.html', {})
+            @@include('blocks/modules/main_block/main_block.html', {
+                'type' : "index1"
+            })
         </main>
-        @@include('blocks/modules/footer/footer.html', {})
-        @@include('blocks/modules/modals/main.modal.html', {})
+        @@include('blocks/modules/footer/footer.html', {
+            "text" : "Лицензия на осуществление деятельности букмекерской конторы №20019733 от 31.12.2020г. (действительна до 17.07.2028г.) выдана РГУ «Комитет индустрии туризма Министерства культуры и спорта Республики Казахстан»"
+        })
     </div>
     <script src="js/app.min.js"></script>
 </body>

@@ -5,12 +5,12 @@
         <div class="header__reward"><img src="./img/svg/reward2.svg" alt=""></div>
     </div>
     <div class="header__lang">
-        <a href="/" class="isActive">RU</a>
-        <a href="/">KZ</a>
+        <a href="/"@@if (type === 'ru') { class="isActive"}>RU</a>
+        <a href="@@if (pages === 'index1') {/index_kz.html}@@if (pages === 'index2') {/index_kz2.html}"@@if (type === 'kz') { class="isActive"}>KZ</a>
     </div>
     <div class="header__buttons" v-if="!isTablet && !isMobile">
-        <a href="#" class="header__button"><span>Вход</span></a>
-        <a href="#" class="header__button yellow"><span>Регистрация</span></a>
+        <a href="#" class="header__button"><span>@@text</span></a>
+        <a href="#" class="header__button yellow"><span>@@text2</span></a>
     </div>
     <div class="header__socs" v-if="isTablet || isMobile">
         <a href="#"><img src="./img/svg/s1.svg" alt=""></a>
