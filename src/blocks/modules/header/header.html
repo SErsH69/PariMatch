@@ -1,12 +1,12 @@
 <header class="header">
     <div class="header__logos">
-        <a href="/" class="header__logo"><img src="./img/svg/logo.svg" alt=""></a>
+        <a href="/PariMatch/dist/" class="header__logo"><img src="./img/svg/logo.svg" alt=""></a>
         <div class="header__reward"><img src="./img/svg/reward1.svg" alt=""></div>
-        <div class="header__reward"><img src="./img/svg/reward2.svg" alt=""></div>
+        <div class="header__reward"><img src="./img/svg/rewardSec.svg" alt=""></div>
     </div>
     <div class="header__lang">
         <a href="/"@@if (type === 'ru') { class="isActive"}>RU</a>
-        <a href="@@if (pages === 'index1') {/index_kz.html}@@if (pages === 'index2') {/index_kz2.html}"@@if (type === 'kz') { class="isActive"}>KZ</a>
+        <a href="@@if (pages === 'index1') {/PariMatch/dist/index_kz.html}@@if (pages === 'index2') {/PariMatch/dist/index_kz2.html}"@@if (type === 'kz') { class="isActive"}>KZ</a>
     </div>
     <div class="header__buttons" v-if="!isTablet && !isMobile">
         <a href="#" class="header__button"><span>@@text</span></a>
